@@ -17,3 +17,23 @@ gyp ERR! node -v v22.13.1
 gyp ERR! node-gyp -v v11.0.0
 gyp ERR! not ok 
 node-gyp exited with 1
+
+
+
+
+make: Entering directory '/home/plunda/Documents/napi-canon-cameras/build'
+  COPY Release/libEDSDK.so
+  CXX(target) Release/obj.target/canon_api/src/library/api-error.o
+g++: error: unrecognized command-line option ‘-m64’
+make: *** [canon_api.target.mk:153: Release/obj.target/canon_api/src/library/api-error.o] Error 1
+make: Leaving directory '/home/plunda/Documents/napi-canon-cameras/build'
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack at ChildProcess.<anonymous> (/usr/local/lib/node_modules/node-gyp/lib/build.js:216:23)
+gyp ERR! System Linux 6.1.21-v8+
+gyp ERR! command "/usr/local/bin/node" "/usr/local/bin/node-gyp" "rebuild" "--target=23.0.0" "--devdir=/tmp/prebuildify/node" "--arch=x64" "--release"
+gyp ERR! cwd /home/plunda/Documents/napi-canon-cameras
+gyp ERR! node -v v22.13.1
+gyp ERR! node-gyp -v v11.0.0
+gyp ERR! not ok 
+node-gyp exited with 1

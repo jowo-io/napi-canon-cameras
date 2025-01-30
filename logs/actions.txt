@@ -1,4 +1,32 @@
+-- raspbian --
+
 apt-get install g++-x86-64-linux-gnu libc6-dev-amd64-cross
 
 dpkg --add-architecture amd64 
 apt-get update
+
+-- ubuntu --
+
+
+sudo apt update
+sudo apt upgrade
+sudo apt install nodejs
+sudo npm install -g n
+sudo n i 22
+
+----- restart terminal ------
+
+
+cd napi folder
+sudo -s
+rm -rf package-lock.json node_modules/
+npm install --global node-gyp@latest
+sudo apt-get install python3-pip
+
+
+npm config set node_gyp $(npm prefix -g)/lib/node_modules/node-gyp/bin/node-gyp.js
+python3 --version
+python3 -m pip --version
+
+npm run clean
+npm i

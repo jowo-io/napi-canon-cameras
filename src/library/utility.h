@@ -9,6 +9,7 @@ include <CoreFoundation/CoreFoundation.h>
 
 #include <EDSDKTypes.h>
 #include <cctype>
+#include <stdexcept>
 
 namespace CameraApi {
 

@@ -1,6 +1,7 @@
 #include "api-error.h"
 #include "utility.h"
 #include "labels.h"
+#include <stdexcept>
 
 namespace CameraApi {
 

@@ -37,3 +37,29 @@ gyp ERR! node -v v22.13.1
 gyp ERR! node-gyp -v v11.0.0
 gyp ERR! not ok 
 node-gyp exited with 1
+
+
+
+
+
+g++ --version
+g++ (Raspbian 10.2.1-6+rpi1) 10.2.1 20210110
+Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+
+
+
+CameraAdd { camera: Camera <Canon EOS M6 Mark II> }
+[1] connect
+[1] { camera: Camera <Canon EOS M6 Mark II> }
+[1] Error: EDSDK - DEVICE_NOT_FOUND
+[1]     at Object.connect (/home/plunda/Documents/plunda-scales/public/utils/edsdk/index.js:54:20)
+[1]     at IpcMainImpl.<anonymous> (/home/plunda/Documents/plunda-scales/public/electron.js:41:15)
+[1]     at IpcMainImpl.emit (node:events:527:28)
+[1]     at EventEmitter.<anonymous> (node:electron/js2c/browser_init:161:11014)
+[1]     at EventEmitter.emit (node:events:527:28) {
+[1]   EDS_ERROR: ApiError <DEVICE_NOT_FOUND>
+[1] }

@@ -1,0 +1,100 @@
+> @dimensional/napi-canon-cameras@0.1.0 install
+> node-gyp-build
+
+gyp info it worked if it ends with ok
+gyp info using node-gyp@11.0.0
+gyp info using node@22.13.1 | linux | arm
+gyp info find Python using Python version 3.9.2 found at "/usr/bin/python3"
+
+gyp info spawn /usr/bin/python3
+gyp info spawn args [
+gyp info spawn args '/usr/local/lib/node_modules/npm/node_modules/node-gyp/gyp/gyp_main.py',
+gyp info spawn args 'binding.gyp',
+gyp info spawn args '-f',
+gyp info spawn args 'make',
+gyp info spawn args '-I',
+gyp info spawn args '/home/plunda/Documents/napi-canon-cameras/build/config.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '/usr/local/lib/node_modules/npm/node_modules/node-gyp/addon.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '/root/.cache/node-gyp/22.13.1/include/node/common.gypi',
+gyp info spawn args '-Dlibrary=shared_library',
+gyp info spawn args '-Dvisibility=default',
+gyp info spawn args '-Dnode_root_dir=/root/.cache/node-gyp/22.13.1',
+gyp info spawn args '-Dnode_gyp_dir=/usr/local/lib/node_modules/npm/node_modules/node-gyp',
+gyp info spawn args '-Dnode_lib_file=/root/.cache/node-gyp/22.13.1/<(target_arch)/node.lib',
+gyp info spawn args '-Dmodule_root_dir=/home/plunda/Documents/napi-canon-cameras',
+gyp info spawn args '-Dnode_engine=v8',
+gyp info spawn args '--depth=.',
+gyp info spawn args '--no-parallel',
+gyp info spawn args '--generator-output',
+gyp info spawn args 'build',
+gyp info spawn args '-Goutput_dir=.'
+gyp info spawn args ]
+gyp info spawn make
+gyp info spawn args [ 'BUILDTYPE=Release', '-C', 'build' ]
+make: Entering directory '/home/plunda/Documents/napi-canon-cameras/build'
+  COPY Release/libEDSDK.so
+  CXX(target) Release/obj.target/canon_api/src/library/api-error.o
+  CXX(target) Release/obj.target/canon_api/src/library/api-identifier.o
+  CXX(target) Release/obj.target/canon_api/src/library/base64.o
+  CXX(target) Release/obj.target/canon_api/src/library/camera.o
+../src/library/camera.cc: In static member function ‘static EdsError CameraApi::Camera::handleStateEvent(EdsStateEvent, EdsUInt32, EdsVoid*)’:
+../src/library/camera.cc:382:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  382 |                 if (camera->isConnected_ && camera->shouldKeepAlive_) {
+      |                 ^~
+../src/library/camera.cc:387:13: note: here
+  387 |             default:
+      |             ^~~~~~~
+  CXX(target) Release/obj.target/canon_api/src/library/camera-browser.o
+  CXX(target) Release/obj.target/canon_api/src/library/camera-file.o
+  CXX(target) Release/obj.target/canon_api/src/library/camera-property.o
+  CXX(target) Release/obj.target/canon_api/src/library/camera-api.o
+  CXX(target) Release/obj.target/canon_api/src/library/directory.o
+  CXX(target) Release/obj.target/canon_api/src/library/labels.o
+  CXX(target) Release/obj.target/canon_api/src/library/live-view-image.o
+  CXX(target) Release/obj.target/canon_api/src/library/object-event.o
+  CXX(target) Release/obj.target/canon_api/src/library/option.o
+  CXX(target) Release/obj.target/canon_api/src/library/output-device.o
+  CXX(target) Release/obj.target/canon_api/src/library/aperture.o
+In file included from /usr/include/c++/10/map:60,
+                 from ../src/library/aperture.cc:3:
+/usr/include/c++/10/bits/stl_tree.h: In member function ‘std::pair<std::_Rb_tree_node_base*, std::_Rb_tree_node_base*> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_get_insert_hint_unique_pos(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator, const key_type&) [with _Key = int; _Val = std::pair<const int, double>; _KeyOfValue = std::_Select1st<std::pair<const int, double> >; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, double> >]’:
+/usr/include/c++/10/bits/stl_tree.h:2193:5: note: parameter passing for argument of type ‘std::_Rb_tree<int, std::pair<const int, double>, std::_Select1st<std::pair<const int, double> >, std::less<int>, std::allocator<std::pair<const int, double> > >::const_iterator’ changed in GCC 7.1
+ 2193 |     _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CXX(target) Release/obj.target/canon_api/src/library/exposure-compensation.o
+  CXX(target) Release/obj.target/canon_api/src/library/file-format.o
+  CXX(target) Release/obj.target/canon_api/src/library/flag.o
+  CXX(target) Release/obj.target/canon_api/src/library/image-quality.o
+  CXX(target) Release/obj.target/canon_api/src/library/iso-sensitivity.o
+  CXX(target) Release/obj.target/canon_api/src/library/shutter-speed.o
+In file included from /usr/include/c++/10/map:60,
+                 from ../src/library/shutter-speed.cc:3:
+/usr/include/c++/10/bits/stl_tree.h: In member function ‘std::pair<std::_Rb_tree_node_base*, std::_Rb_tree_node_base*> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_get_insert_hint_unique_pos(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::const_iterator, const key_type&) [with _Key = int; _Val = std::pair<const int, double>; _KeyOfValue = std::_Select1st<std::pair<const int, double> >; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, double> >]’:
+/usr/include/c++/10/bits/stl_tree.h:2193:5: note: parameter passing for argument of type ‘std::_Rb_tree<int, std::pair<const int, double>, std::_Select1st<std::pair<const int, double> >, std::less<int>, std::allocator<std::pair<const int, double> > >::const_iterator’ changed in GCC 7.1
+ 2193 |     _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CXX(target) Release/obj.target/canon_api/src/library/state-event.o
+  CXX(target) Release/obj.target/canon_api/src/library/time-zone.o
+  CXX(target) Release/obj.target/canon_api/src/library/utility.o
+  CXX(target) Release/obj.target/canon_api/src/library/volume.o
+  SOLINK_MODULE(target) Release/obj.target/canon_api.node
+/home/plunda/Documents/napi-canon-cameras/third_party/EDSDKv131840L/Linux/EDSDK/Library/x86_64/libEDSDK.so: file not recognized: file format not recognized
+collect2: error: ld returned 1 exit status
+make: *** [canon_api.target.mk:184: Release/obj.target/canon_api.node] Error 1
+make: Leaving directory '/home/plunda/Documents/napi-canon-cameras/build'
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:216:23)
+gyp ERR! System Linux 5.15.61-v7l+
+gyp ERR! command "/usr/local/bin/node" "/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "rebuild"
+gyp ERR! cwd /home/plunda/Documents/napi-canon-cameras
+gyp ERR! node -v v22.13.1
+gyp ERR! node-gyp -v v11.0.0
+gyp ERR! not ok 
+npm error code 1
+npm error path /home/plunda/Documents/napi-canon-cameras
+npm error command failed
+npm error command sh -c node-gyp-build
+npm error A complete log of this run can be found in: /root/.npm/_logs/2025-01-30T08_32_15_994Z-debug-0.log

@@ -1,0 +1,69 @@
+raspberrypi# npm run package
+
+> @dimensional/napi-canon-cameras@0.1.0 package
+> npm run prebuild && node helpers/create-tgz.js
+
+
+> @dimensional/napi-canon-cameras@0.1.0 prebuild
+> run-script-os
+
+
+> @dimensional/napi-canon-cameras@0.1.0 prebuild:linux
+> npm run prebuild:x64 && npm run build:stubs
+
+
+> @dimensional/napi-canon-cameras@0.1.0 prebuild:x64
+> prebuildify --napi --strip --arch x64 --verbose
+
+gyp info it worked if it ends with ok
+gyp info using node-gyp@11.0.0
+gyp info using node@22.13.1 | linux | arm
+gyp info find Python using Python version 3.9.2 found at "/usr/bin/python3"
+
+gyp http GET https://nodejs.org/dist/v23.0.0/node-v23.0.0-headers.tar.gz
+gyp http 200 https://nodejs.org/dist/v23.0.0/node-v23.0.0-headers.tar.gz
+gyp http GET https://nodejs.org/dist/v23.0.0/SHASUMS256.txt
+gyp http 200 https://nodejs.org/dist/v23.0.0/SHASUMS256.txt
+gyp info spawn /usr/bin/python3
+gyp info spawn args [
+gyp info spawn args '/usr/local/lib/node_modules/node-gyp/gyp/gyp_main.py',
+gyp info spawn args 'binding.gyp',
+gyp info spawn args '-f',
+gyp info spawn args 'make',
+gyp info spawn args '-I',
+gyp info spawn args '/home/plunda/Documents/napi-canon-cameras/build/config.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '/usr/local/lib/node_modules/node-gyp/addon.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '/tmp/prebuildify/node/23.0.0/include/node/common.gypi',
+gyp info spawn args '-Dlibrary=shared_library',
+gyp info spawn args '-Dvisibility=default',
+gyp info spawn args '-Dnode_root_dir=/tmp/prebuildify/node/23.0.0',
+gyp info spawn args '-Dnode_gyp_dir=/usr/local/lib/node_modules/node-gyp',
+gyp info spawn args '-Dnode_lib_file=/tmp/prebuildify/node/23.0.0/<(target_arch)/node.lib',
+gyp info spawn args '-Dmodule_root_dir=/home/plunda/Documents/napi-canon-cameras',
+gyp info spawn args '-Dnode_engine=v8',
+gyp info spawn args '--depth=.',
+gyp info spawn args '--no-parallel',
+gyp info spawn args '--generator-output',
+gyp info spawn args 'build',
+gyp info spawn args '-Goutput_dir=.'
+gyp info spawn args ]
+gyp info spawn make
+gyp info spawn args [ 'BUILDTYPE=Release', '-C', 'build' ]
+make: Entering directory '/home/plunda/Documents/napi-canon-cameras/build'
+  COPY Release/libEDSDK.so
+  CXX(target) Release/obj.target/canon_api/src/library/api-error.o
+g++: error: unrecognized command-line option ‘-m64’
+make: *** [canon_api.target.mk:153: Release/obj.target/canon_api/src/library/api-error.o] Error 1
+make: Leaving directory '/home/plunda/Documents/napi-canon-cameras/build'
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack at ChildProcess.<anonymous> (/usr/local/lib/node_modules/node-gyp/lib/build.js:216:23)
+gyp ERR! System Linux 5.15.61-v7l+
+gyp ERR! command "/usr/local/bin/node" "/usr/local/bin/node-gyp" "rebuild" "--target=23.0.0" "--devdir=/tmp/prebuildify/node" "--arch=x64" "--release"
+gyp ERR! cwd /home/plunda/Documents/napi-canon-cameras
+gyp ERR! node -v v22.13.1
+gyp ERR! node-gyp -v v11.0.0
+gyp ERR! not ok 
+node-gyp exited with 1
